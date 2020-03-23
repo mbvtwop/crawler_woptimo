@@ -64,8 +64,8 @@ async function writeToBigQuery(result) {
     previous_url: result.previousUrl,
     document_title: result.result.title,
     meta_description: result.result.metaDescription,
-    footer_title: result.result.footerTitle
-
+    footer_title: result.result.footerTitle,
+    twitter_title: result.result.twitterTitle
   };
 
   await bigquery
@@ -141,7 +141,8 @@ function evaluatePage() {
   return {
     title: $('title').text(),
     metaDescription: $('meta[name="description"]').attr('content'),
-    footerTitle: document.querySelector("#footer > div.container > div > div:nth-child(1) > div").innerText
+    footerTitle: document.querySelector("#footer > div.container > div > div:nth-child(1) > div").innerText,
+    twitterTitle: $('meta[name="twitter:title"]').attr('content')
   };
 }
 

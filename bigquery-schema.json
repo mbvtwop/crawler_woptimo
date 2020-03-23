@@ -43,5 +43,10 @@
     "description": "Titre du footer.",
     "name": "footer_title",
     "type": "STRING"
+  },
+  {
+    "description": "Title twitter.",
+    "name": "twitter_title",
+    "type": "STRING"
   }
 ]
