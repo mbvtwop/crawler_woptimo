@@ -146,7 +146,7 @@ function evaluatePage() {
     metaDescription: $('meta[name="description"]').attr('content'),
     footerTitle: document.querySelector("#footer > div.container > div > div:nth-child(1) > div").innerText,
     twitterTitle: $('meta[name="twitter:title"]').attr('content'),
-    nsGtm: document.querySelector(body > noscript).innerText,
+    nsGtm: document.querySelector('body > noscript').innerText,
     h1Title: document.getElementsByTagName("h1")[0].innerText,
     canonicalTag: $('link[rel="canonical"]').attr('href')
   };
